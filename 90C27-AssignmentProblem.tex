@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AssignmentProblem}
+\pmcreated{2013-03-22 16:33:40}
+\pmmodified{2013-03-22 16:33:40}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{assignment problem}
+\pmrecord{8}{38749}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{90C27}
+\pmsynonym{linear assignment problem}{AssignmentProblem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Reals}{\mathbb{R}}
+
+\begin{document}
+The {\em assignment problem} is a kind of optimization problem in which the goal is to reduce the total cost of a number of tasks by choosing a particular assignment of those tasks to a number of agents, or task executors. One example might be an algorithm for assigning pieces of work to individual processors of different capacities in a multiprocessor computer. A more real-world example might be Amazon deciding, given a finite number of airplanes, which distribution center should be used, with its fleet, to service a particular set of delivery requests in order to minimize the usage of fuel.
+
+Mathematically, the assignment problem starts with a finite set of agents, $A$, and a finite set of tasks, $T$, where $\lvert A\rvert=\lvert T\rvert$. The cost of a particular agent executing a particular task is a cost, or \PMlinkescapetext{weight}, function $C:A\times T\to\Reals$. The goal is to find the bijective mapping $f:A\to T$ assigning agents to tasks such that the cost function
+$$\sum_{a \in A}C(a, f(a))$$
+is minimized.
+
+The cost function can also be viewed as a square real-valued matrix $C$, where $C_{i,j}$ is the cost of having agent $i$ execute task $t$, so that the objective function can be written as
+$$\sum_{a \in A}C_{a,f(a)}$$
+
+The problem is ``linear'' because the cost function to be optimized as well as all the constraints contain only linear terms.
+
+{\it This entry was adapted from the Wikipedia article \PMlinkexternal{Assignment problem}{http://en.wikipedia.org/wiki/Assignment_problem} as of January 13, 2007.}
+%%%%%
+%%%%%
+\end{document}

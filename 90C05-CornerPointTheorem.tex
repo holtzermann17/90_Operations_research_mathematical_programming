@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CornerPointTheorem}
+\pmcreated{2013-03-22 15:39:16}
+\pmmodified{2013-03-22 15:39:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{corner point theorem}
+\pmrecord{12}{37587}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{90C05}
+\pmsynonym{fundamental theorem of linear programming}{CornerPointTheorem}
+\pmdefines{corner point}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $P$ be a primal linear programming problem with $f$ the objective function and polyhedron $R$ as its feasible region.  A \emph{corner point}, or extreme point of $P$ is a \PMlinkescapetext{vertex} of $R$.
+
+\textbf{Corner Point Theorem.}  If $P$ has an optimal solution $a<\infty$, then there is a corner point $p$ of $P$ such that $f(p)=a$.  If another corner point $q$ also satisfies $f(x)=a$, then $f(\overline{pq})=\lbrace a\rbrace$.  If $r$ is a third corner point such that $f(r)=a$, then $f(\triangle pqr)=\lbrace a\rbrace$.
+
+Note that the line segment and triangle mentioned above are necessarily subsets of $R$.
+
+A cousin of the above theorem is the following:
+
+\textbf{Theorem.}  If $P$ has an optimal solution $a<\infty$ occurring at an interior point of an edge $E$ (or a face $F$) on the boundary of the feasible region $R$, then $f(E)=\lbrace a\rbrace$ (or $f(F)=\lbrace a\rbrace$).  In fact, if the solution occurs at an interior point of $R$, then the solution is satisfied by all points of $R$: $f(R)=\lbrace a\rbrace$.  In other words, the objective function $f$ is constant on $R$.
+
+On way to visualize the above theorems is to simplify them into the case when the objective function is a line $f(x)=mx+b$ on the ``$x-y$ plane'' and the feasible region is a line segment $I=[x_0,x_1]$ on the $x$-axis.  It is easy to see now that the maximum (or minimum) of $f$ occurs at either $x_0$ or $x_1$.  If the optimal value occurs either at both end points, or at an interior point $x_2\in(x_0,x_1)$, then $f$ is a horizontal line segment on $I$.
+
+An application of the above theorems can be demonstrated by the following example:  If the feasible region $R$ is a unit square and if corner points $(0,0),(1,1)$ satisfy the optimal solution of $P$, then all points on $\lbrace (x,y)\mid x=y\rbrace \cap R$ satisfy the solution.  In particular, $(\frac{1}{2},\frac{1}{2})$, an interior point of $R$, satisfies the solution.  As a result, all points of $R$ satisfy the solution.
+%%%%%
+%%%%%
+\end{document}

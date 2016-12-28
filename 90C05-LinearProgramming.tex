@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearProgramming}
+\pmcreated{2013-03-22 13:41:41}
+\pmmodified{2013-03-22 13:41:41}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{linear programming}
+\pmrecord{12}{34369}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{90C05}
+\pmsynonym{LP}{LinearProgramming}
+%\pmkeywords{linear programming}
+\pmrelated{DualityInMathematics}
+\pmdefines{linear programming problem}
+\pmdefines{objective function}
+\pmdefines{feasible region}
+\pmdefines{feasible}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{polynomial}
+\PMlinkescapeword{exponential}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{unbounded}
+\PMlinkescapeword{states}
+\PMlinkescapeword{function}
+A \emph{linear programming problem}, or \emph{LP}, 
+is a problem of optimizing a given
+linear objective function over some polyhedron.  The standard
+maximization LP, sometimes called the
+primal problem, is
+\begin{align*}
+\text{maximize\ }   & c^Tx\  \\
+\text{s.t.\ }       & Ax\le b\tag{P}\label{eq:primal} \\
+                    &  x\ge 0
+\end{align*}
+Here $c^Tx$ is the objective function and the remaining conditions
+define the polyhedron which is the feasible region over which the
+objective function is to be optimized.  The dual of
+$({\ref{eq:primal}})$ is the LP
+\begin{align*}
+\text{minimize\ }  & y^Tb\ \\
+\text{s.t.\ }      & y^TA\ge c^T\tag{D}\label{eq:dual} \\
+                   &    y\ge 0
+\end{align*}
+
+The linear constraints for a linear programming problems define a convex polyhedron, called the \emph{feasible region} for the problem.  The weak duality theorem states that if $\hat{x}$ is feasible (i.e. lies in the feasible region) for
+$(\ref{eq:primal})$ and $\hat{y}$ is feasible for $(\ref{eq:dual})$,
+then $c^T\hat{x}\le\hat{y}^Tb$.  This follows readily from the above:
+\[c^T\hat{x}\le(\hat{y}^TA)\hat{x}=\hat{y}^T(A\hat{x})\le y^Tb.\]
+The strong duality theorem states that if both LPs are feasible,
+then the two objective functions have the same optimal value.  As a
+consequence, if
+either LP has unbounded objective function value, the other must
+be infeasible.  It is also possible for both LP to be infeasible.
+
+The \PMlinkname{simplex method}{SimplexAlgorithm} of G. B. Dantzig is 
+the algorithm
+most commonly used to solve LPs; in practice it runs in polynomial time,
+but the worst-case running time is exponential.  Two polynomial-time
+algorithms for solving LPs are the ellipsoid method of L. G. Khachian
+and the interior-point method of N. Karmarkar.
+
+\begin{thebibliography}{3}
+\bibitem{cite:C}
+Chv\'{a}tal, V.,  \emph{Linear programming}, W. H. Freeman and Company, 1983.
+\bibitem{cite:CLRS}
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., and C. Stein,
+\emph{Introduction to algorithms}, MIT Press, 2001.
+\bibitem{cite:KV}
+Korte, B. and J. Vygen,  \emph{Combinatorial optimization: theory and
+algorithms}, Springer-Verlag, 2002.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

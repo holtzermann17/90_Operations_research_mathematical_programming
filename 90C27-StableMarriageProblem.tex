@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StableMarriageProblem}
+\pmcreated{2013-03-22 16:10:26}
+\pmmodified{2013-03-22 16:10:26}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{stable marriage problem}
+\pmrecord{5}{38259}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{90C27}
+\pmclassification{msc}{05C85}
+\pmdefines{unstable}
+\pmdefines{stable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{Gale}
+\PMlinkescapeword{partition}
+\PMlinkescapeword{function}
+\PMlinkescapeword{perfect}
+\PMlinkescapeword{similar}
+
+The \emph{stable marriage problem} is a problem in combinatorial optimization proposed and solved by \PMlinkescapetext{Gale} and Shapley.  We will present the problem in concrete terms, interpret it in graph-theoretical terms, then solve it.
+
+In a small town there are $n$ men and $n$ women who wish to be wed.  Each person would be happy to be married to any of the people of the opposite sex but has a definite preference ranking of the possible marriage partners.  If marriages are arranged arbitrarily, some of the marriages can be unstable in the following sense.  Suppose Alice marries Bob and Carol marries Dave.  If Alice prefers Dave to Bob and Dave prefers Alice to Carol, then Alice and Dave will have an affair; in this situation, we say that the marriages of Alice and Dave are \emph{unstable}.  The stable marriage problem is to determine whether all people can be married with all marriages stable.
+
+\[\xymatrix{
+\text{Alice}\ar@{-}[r]\ar@{.}[rd]^{\text{tryst}} & \text{Bob} \\
+\text{Carol}\ar@{-}[r] & \text{Dave}
+}\]
+
+Here is a graph-theoretical interpretation of the problem.  Let $G=K_{n,n}$ be a complete bipartite graph with partition $V(G)=A\coprod B$, and let $G'$ be the directed $G$, that is, $G$ with each undirected edge $uv$ replaced by the directed edges $\vec{uv}$ and $\vec{vu}$.  Let $w\colon E(G')\to\{1,\dots,n\}$ be a weight function on $G'$ such that all the edges out of a vertex are assigned distinct weights.  A matching $\mathcal{M}\subset E(G)$ is \emph{unstable} if there exist edges $st$, $uv$ in $\mathcal{M}$ with $s$, $u$  both in $A$ or both in $B$ such that $w(sv)>w(st)$ and $w(vs)>w(vu)$, and is \emph{stable} otherwise.  Find a stable perfect matching of $G$.
+
+To solve the problem, we return to the small town.  First, each woman proposes to the man at the top of her list.  Each man waits until everyone who is going to propose to him has done so, then says yes to his favorite out of the proposers and rejects the rest.  These couples then get married.  Each woman who was rejected crosses out the top name on her list and proposes to her second choice.  The men consider and respond to the offers as before, and any new couples formed get married.  Each woman will eventually find a man to accept her proposal, and each man will eventually receive a proposal.  Thus this process guarantees that every person will find a spouse.
+
+We claim that all of the marriages are stable.  To see this, consider again the example of Alice and Bob and Carol and Dave.
+
+\[\xymatrix{
+\text{Alice}\ar@{-}[r] & \text{Bob} \\
+\text{Carol}\ar@{-}[r] & \text{Dave}
+}\]
+
+Suppose Alice prefers Dave to Bob.  Since Alice proposed first to her favorites and only moved down the list when she was rejected, Dave must have rejected Alice's proposal.  Hence Dave must prefer Carol to Alice.  Similarly, if Carol prefers Bob to Dave, then Bob prefers Alice to Carol.  Hence both marriages are stable: each woman is either satisfied with her marriage or is unable to find a man willing to have an affair.
+
+We can also argue for stability from the men's perspective.  For example, suppose Bob prefers Carol to Alice.  This means that had Carol proposed to him, he would have said yes to Carol and rejected Alice.  Since he didn't reject Alice, it must be the case that Carol never proposed to him.  But she did propose to Dave, so she must prefer Dave to Bob.  Similar remarks hold for Dave.  Again either a man is satisfied with his marriage or is unable to find a woman willing to have an affair; therefore, all marriages are stable.
+
+\begin{thebibliography}{9}
+\bibitem{GS}
+D. Gale and L.S. Shapley, \emph{College admissions and the stability of marriage
+}, American Mathematical Monthly 69 (1962), no 1., 9--15.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}
