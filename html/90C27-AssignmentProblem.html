@@ -1,0 +1,109 @@
+<!DOCTYPE html><html>
+<head>
+<title>assignment problem</title>
+<!--Generated on Sat Feb 10 13:36:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">assignment problem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">assignment problem</span> is a kind of optimization problem in which the goal is to reduce the total cost of a number of tasks by choosing a particular assignment of those tasks to a number of agents, or task executors. One example might be an algorithm for assigning pieces of work to individual processors of different capacities in a multiprocessor computer. A more real-world example might be Amazon deciding, given a finite number of airplanes, which distribution center should be used, with its fleet, to service a particular set of delivery requests in order to minimize the usage of fuel.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Mathematically, the assignment problem starts with a finite set of agents, <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and a finite set of tasks, <math id="p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, where <math id="p2.m3" class="ltx_Math" alttext="\lvert A\rvert=\lvert T\rvert" display="inline"><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>A</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>T</mi><mo fence="true" stretchy="false">|</mo></mrow></mrow></math>. The cost of a particular agent executing a particular task is a cost, or , function <math id="p2.m4" class="ltx_Math" alttext="C:A\times T\to\mathbb{R}" display="inline"><mrow><mi>C</mi><mo>:</mo><mrow><mrow><mi>A</mi><mo>×</mo><mi>T</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>. The goal is to find the bijective mapping <math id="p2.m5" class="ltx_Math" alttext="f:A\to T" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> assigning agents to tasks such that the cost function</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\sum_{a\in A}C(a,f(a))" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></munder><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is minimized.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The cost function can also be viewed as a square real-valued matrix <math id="p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, where <math id="p3.m2" class="ltx_Math" alttext="C_{i,j}" display="inline"><msub><mi>C</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></math> is the cost of having agent <math id="p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> execute task <math id="p3.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, so that the objective function can be written as
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\sum_{a\in A}C_{a,f(a)}" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></munder><msub><mi>C</mi><mrow><mi>a</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The problem is “linear” because the cost function to be optimized as well as all the constraints contain only linear terms.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">This entry was adapted from the Wikipedia article </span><span class="ltx_text ltx_font_typewriter">http://en.wikipedia.org/wiki/Assignment_problem</span><span class="ltx_text ltx_font_italic">Assignment problem as of January 13, 2007.</span>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">assignment problem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AssignmentProblem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:33:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:33:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 90C27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">linear assignment problem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:36:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
