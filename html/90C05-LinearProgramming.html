@@ -18,10 +18,10 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">linear programming problem</em>, or <em class="ltx_emph ltx_font_italic">LP</em>,
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/linearprogramming">linear programming problem</a></em>, or <em class="ltx_emph ltx_font_italic">LP</em>,
 is a problem of optimizing a given
 linear objective function over some polyhedron. The standard
-maximization LP, sometimes called the
+<a class="nnexus_concept" href="http://mathworld.wolfram.com/Maximization.html">maximization</a> LP, sometimes called the
 primal problem, is</p>
 <table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
@@ -73,7 +73,7 @@ objective function is to be optimized. The dual of
 </table>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">The linear constraints for a linear programming problems define a convex polyhedron, called the <em class="ltx_emph ltx_font_italic">feasible region</em> for the problem. The weak duality theorem states that if <math id="p2.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover></math> is feasible (i.e. lies in the feasible region) for
+<p class="ltx_p">The linear constraints for a linear programming problems define a <a class="nnexus_concept" href="http://mathworld.wolfram.com/ConvexPolyhedron.html">convex polyhedron</a>, called the <em class="ltx_emph ltx_font_italic">feasible region</em> for the problem. The weak duality theorem states that if <math id="p2.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover></math> is feasible (i.e. lies in the feasible region) for
 <math id="p2.m2" class="ltx_Math" alttext="(\ref{eq:primal})" display="inline"><mrow><mo stretchy="false">(</mo><mtext mathvariant="italic"><a href="#S0.Ex2" title="(P) ‣ linear programming" class="ltx_ref ltx_font_italic"><span class="ltx_text ltx_ref_tag">(P)</span></a></mtext><mo stretchy="false">)</mo></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="\hat{y}" display="inline"><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover></math> is feasible for <math id="p2.m4" class="ltx_Math" alttext="(\ref{eq:dual})" display="inline"><mrow><mo stretchy="false">(</mo><mtext mathvariant="italic"><a href="#S0.Ex5" title="(D) ‣ linear programming" class="ltx_ref ltx_font_italic"><span class="ltx_text ltx_ref_tag">(D)</span></a></mtext><mo stretchy="false">)</mo></mrow></math>,
 then <math id="p2.m5" class="ltx_Math" alttext="c^{T}\hat{x}\leq\hat{y}^{T}b" display="inline"><mrow><mrow><msup><mi>c</mi><mi>T</mi></msup><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover></mrow><mo>≤</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>b</mi></mrow></mrow></math>. This follows readily from the above:</p>
 <table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
@@ -91,9 +91,9 @@ either LP has unbounded objective function value, the other must
 be infeasible. It is also possible for both LP to be infeasible.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">The simplex method (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SimplexAlgorithm</span>) of G. B. Dantzig is
-the algorithm
-most commonly used to solve LPs; in practice it runs in polynomial time,
+<p class="ltx_p">The <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">simplex method</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/SimplexMethod.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/simplexalgorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SimplexAlgorithm</span>) of G. B. Dantzig is
+the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">algorithm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Algorithm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/algorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
+most commonly used to solve LPs; in practice it runs in <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">polynomial time</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/PolynomialTime.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/timecomplexity"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>,
 but the worst-case running time is exponential. Two polynomial-time
 algorithms for solving LPs are the ellipsoid method of L. G. Khachian
 and the interior-point method of N. Karmarkar.</p>
@@ -107,7 +107,7 @@ and the interior-point method of N. Karmarkar.</p>
         <span class="ltx_bibtag ltx_role_refnum">1</span>
         
 <span class="ltx_bibblock">
-Chvátal, V., <em class="ltx_emph ltx_font_italic">Linear programming</em>, W. H. Freeman and Company, 1983.
+Chvátal, V., <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LinearProgramming.html">Linear programming</a></em>, W. H. Freeman and Company, 1983.
 
 </span>
       </li>
@@ -126,7 +126,7 @@ Cormen, T. H., Leiserson, C. E., Rivest, R. L., and C. Stein,
         <span class="ltx_bibtag ltx_role_refnum">3</span>
         
 <span class="ltx_bibblock">
-Korte, B. and J. Vygen, <em class="ltx_emph ltx_font_italic">Combinatorial optimization: theory and
+Korte, B. and J. Vygen, <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/CombinatorialOptimization.html">Combinatorial optimization</a>: theory and
 algorithms</em>, Springer-Verlag, 2002.
 
 </span>
@@ -174,7 +174,7 @@ algorithms</em>, Springer-Verlag, 2002.
 <td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 90C05</td>
 </tr>
 <tr class="ltx_tr">
